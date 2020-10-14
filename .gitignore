@@ -1,0 +1,8 @@
+.import/
+.vs/
+[Dd]ebug/
+.sconsign.dblite
+**.vcxproj.user
+*.obj
+*.exp
+*.lib

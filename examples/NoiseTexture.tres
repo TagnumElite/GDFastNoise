@@ -1,0 +1,21 @@
+[gd_resource type="ProxyTexture" load_steps=4 format=2]
+
+[ext_resource path="res://addons/gdfastnoise/bin/fastnoise.gdns" type="Script" id=1]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 1 )
+seed = 1017
+frequency = 0.092
+noise_type = 0
+rotation_type_3d = 0
+fractal_type = 0
+fractal_octaves = 3
+fractal_lacunarity = 2.0
+fractal_gain = 0.5
+fractal_weighted_strength = 0.0
+fractal_ping_pong_strength = 2.0
+cellular_distance_function = 1
+cellular_return_type = 1
+cellular_jitter = 1.0
+domain_warp_type = 0
+domain_warp_amp = 1.0

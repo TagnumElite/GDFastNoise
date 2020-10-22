@@ -16,7 +16,23 @@ _global_script_class_icons={
 [application]
 
 config/name="GDFastNoise"
+config/description="A Godot plugin for using FastNoise for Noise generation"
 config/icon="res://icon.png"
+
+[autoload]
+
+FNHandler="*res://addons/gdfastnoise/FNHandler.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "gdfastnoise" )
 
 [rendering]
 

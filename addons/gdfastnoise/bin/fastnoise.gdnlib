@@ -1,0 +1,18 @@
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=true
+
+[entry]
+
+X11.64="res://addons/gdfastnoise/bin/x11/libfastnoise.so"
+Windows.64="res://addons/gdfastnoise/bin/win64/libfastnoise.dll"
+OSX.64="res://addons/gdfastnoise/bin/osx/libfastnoise.dylib"
+
+[dependencies]
+
+X11.64=[  ]
+Windows.64=[  ]
+OSX.64=[  ]

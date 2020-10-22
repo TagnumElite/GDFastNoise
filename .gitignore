@@ -6,3 +6,4 @@
 *.obj
 *.exp
 *.lib
+x64/

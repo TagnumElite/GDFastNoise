@@ -27,7 +27,12 @@ jobs:
         run: scons platform=windows generate_bindings=yes -j2
         working-directory: ./godot-cpp
       - name: Build Plugin
-        run: scons platform=windows -j2
+        run: scons platform=windows -j2 use_mingw=yes
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: windows-dll
+          path: addons/gdfastnoise/bin/libfastnoise.dll
   build_x11:
     runs-on: ubuntu-latest
     steps:

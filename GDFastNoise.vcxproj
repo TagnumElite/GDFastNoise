@@ -116,8 +116,17 @@
     <ClInclude Include="src\GDFastNoise.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="addons\gdfastnoise\bin\fastnoisetexture.gdns" />
+    <None Include="addons\gdfastnoise\icons\FastNoise.svg" />
+    <None Include="addons\gdfastnoise\icons\FastNoiseTexture.svg" />
     <None Include="bin\fastnoise.gdnlib" />
     <None Include="bin\fastnoise.gdns" />
+    <None Include="LICENSE" />
+    <None Include="README.md" />
+    <None Include="SConstruct" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

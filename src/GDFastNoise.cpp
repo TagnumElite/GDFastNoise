@@ -30,7 +30,8 @@ void GDFastNoise::_register_methods() {
 	REG_PROP_ENUM(noise_type, NoiseType::NoiseType_OpenSimplex2, "OpenSimplex2,OpenSimplex2S,Cellular,Perlin,Value Cubic,Value");
 	REG_PROP_ENUM(rotation_type_3d, RotationType3D::RotationType3D_None, "None,Improve XY Planes,Improve XZ Planes");
 	REG_PROP_ENUM(fractal_type, FractalType::FractalType_None, "None,FBm,Ridged,Ping Pong,Domain Warp Progressive,Domain Warp Independent");
-	REG_PROP_INT(fractal_octaves, 3);
+	//REG_PROP_INT(fractal_octaves, 3);
+	godot::register_property<GDFastNoise, int>("fractal_octaves", &GDFastNoise::set_fractal_octaves, &GDFastNoise::get_fractal_octaves, 3, GODOT_METHOD_RPC_MODE_DISABLED, GODOT_PROPERTY_USAGE_DEFAULT, GODOT_PROPERTY_HINT_RANGE, "1,9,1,or_greater");
 	REG_PROP_FLOAT(fractal_lacunarity, 2.0f);
 	REG_PROP_FLOAT(fractal_gain, 0.5f);
 	REG_PROP_FLOAT(fractal_weighted_strength, 0.0f);

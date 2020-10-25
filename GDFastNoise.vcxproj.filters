@@ -34,5 +34,25 @@
     <None Include="bin\fastnoise.gdns">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="LICENSE">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="addons\gdfastnoise\icons\FastNoise.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="addons\gdfastnoise\icons\FastNoiseTexture.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SConstruct">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

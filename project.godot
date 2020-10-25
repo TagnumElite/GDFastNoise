@@ -8,15 +8,21 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "ProxyTexture",
+"class": "FastNoiseTexture",
+"language": "GDScript",
+"path": "res://addons/gdfastnoise/FastNoiseTexture.gd"
+} ]
 _global_script_class_icons={
-
+"FastNoiseTexture": "res://addons/gdfastnoise/icons/FastNoiseTexture.svg"
 }
 
 [application]
 
 config/name="GDFastNoise"
 config/description="A Godot plugin for using FastNoise for Noise generation"
+run/main_scene="res://examples/GDFastNoise.tscn"
 config/icon="res://icon.png"
 
 [autoload]

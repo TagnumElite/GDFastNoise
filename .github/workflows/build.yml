@@ -26,7 +26,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
         with:
-          submodule: recursive
+          submodules: recursive
       - name: Install Linux dependencies
         if: matrix.PLATFORM == 'x11'
         run: sudo apt-get install build-essential scons pkg-config libx11-dev libxcursor-dev libxinerama-dev libgl1-mesa-dev libglu-dev libasound2-dev libpulse-dev libudev-dev libxi-dev libxrandr-dev

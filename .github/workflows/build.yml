@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: windows-dll
-          path: addons/gdfastnoise/bin/libfastnoise.dll
+          path: addons/gdfastnoise/bin/win64/libfastnoise.dll
   build_linux:
     runs-on: ubuntu-latest
     steps:
@@ -61,6 +61,11 @@ jobs:
         working-directory: ./godot-cpp
       - name: Build Plugin
         run: scons platform=linux -j2
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: windows-dll
+          path: addons/gdfastnoise/bin/x11/libfastnoise.so
   build_osx:
     runs-on: macos-latest
     steps:
@@ -69,7 +74,7 @@ jobs:
         with:
           submodules: recursive
       - name: Install dependencies
-        run: brew install scons yasm
+        run: sudo brew install scons yasm
       - name: Echo Versions
         run: |
           python --version
@@ -82,7 +87,12 @@ jobs:
           key: osx-godot-cpp
       - name: Build Godot-CPP
         if: steps.cache-godot-cpp.outputs.cache-hit != 'true'
-        run: scons platform=x11 generate_bindings=yes -j2
+        run: scons platform=osx generate_bindings=yes -j2
         working-directory: ./godot-cpp
       - name: Build Plugin
-        run: scons platform=x11 -j2
+        run: scons platform=osx -j2
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: windows-dll
+          path: addons/gdfastnoise/bin/osx/libfastnoise.dylib

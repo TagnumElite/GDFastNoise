@@ -44,97 +44,133 @@ void GDFastNoise::_register_methods() {
 }
 
 void GDFastNoise::_init() {
-	noise = FN();
+
 }
+
+GDFastNoise::GDFastNoise() {
+	noise = FN();
+	_seed = 1337;
+	_frequency = 0.01f;
+	_noiseType = NoiseType::NoiseType_OpenSimplex2;
+	_rotationType3D = RotationType3D::RotationType3D_None;
+	_fractalType = FractalType::FractalType_None;
+	_fractalOctaves = 3;
+	_fractalLacunarity = 2.0f;
+	_fractalGain = 0.5f;
+	_fractalWeightedStrength = 0.0f;
+	_fractalPingPongStrength = 2.0f;
+	_cellularDistanceFunction = CellularDistanceFunction::CellularDistanceFunction_Euclidean;
+	_cellularReturnType = CellularReturnType::CellularReturnType_CellValue;
+	_cellularJitter = 1.0f;
+	_domainWarpType = DomainWarpType::DomainWarpType_OpenSimplex2;
+	_domainWarpAmp = 1.0f;
+}
+
+GDFastNoise::~GDFastNoise() {}
 
 void GDFastNoise::_process(float delta) {}
 
 void GDFastNoise::set_seed(int seed)
 {
+	_seed = seed;
 	noise.SetSeed(seed);
 	emit_changed();
 }
 
 void GDFastNoise::set_frequency(float frequency)
 {
+	_frequency = frequency;
 	noise.SetFrequency(frequency);
 	emit_changed();
 }
 
 void GDFastNoise::set_noise_type(int noiseType)
 {
+	_noiseType = noiseType;
 	noise.SetNoiseType((NoiseType)noiseType);
 	emit_changed();
 }
 
 void GDFastNoise::set_rotation_type_3d(int rotationType3D)
 {
+	_rotationType3D = rotationType3D;
 	noise.SetRotationType3D((RotationType3D)rotationType3D);
 	emit_changed();
 }
 
 void GDFastNoise::set_fractal_type(int fractalType)
 {
+	_fractalType = fractalType;
 	noise.SetFractalType((FractalType)fractalType);
 	emit_changed();
 }
 
 void GDFastNoise::set_fractal_octaves(int octaves)
 {
+	_fractalOctaves = octaves;
 	noise.SetFractalOctaves(octaves);
 	emit_changed();
 }
 
 void GDFastNoise::set_fractal_lacunarity(float lacunarity)
 {
+	_fractalLacunarity = lacunarity;
 	noise.SetFractalLacunarity(lacunarity);
 	emit_changed();
 }
 
 void GDFastNoise::set_fractal_gain(float gain)
 {
+	_fractalGain = gain;
 	noise.SetFractalGain(gain);
 	emit_changed();
 }
 
 void GDFastNoise::set_fractal_weighted_strength(float weightedStrength)
 {
+	_fractalWeightedStrength = weightedStrength;
 	noise.SetFractalWeightedStrength(weightedStrength);
 	emit_changed();
 }
 
 void GDFastNoise::set_fractal_ping_pong_strength(float pingPongStrength)
 {
+	_fractalPingPongStrength = pingPongStrength;
 	noise.SetFractalPingPongStrength(pingPongStrength);
 	emit_changed();
 }
 
 void GDFastNoise::set_cellular_distance_function(int cellularDistanceFunction)
 {
+	_cellularDistanceFunction = cellularDistanceFunction;
 	noise.SetCellularDistanceFunction((CellularDistanceFunction)cellularDistanceFunction);
 	emit_changed();
 }
 
 void GDFastNoise::set_cellular_return_type(int cellularReturnType)
 {
+	_cellularReturnType = cellularReturnType;
 	noise.SetCellularReturnType((CellularReturnType)cellularReturnType);
 	emit_changed();
 }
 
 void GDFastNoise::set_cellular_jitter(float cellularJitter)
 {
+	_cellularJitter = cellularJitter;
 	noise.SetCellularJitter(cellularJitter);
 	emit_changed();
 }
 
 void GDFastNoise::set_domain_warp_type(int domainWarpType)
 {
+	_domainWarpType = domainWarpType;
 	noise.SetDomainWarpType((DomainWarpType)domainWarpType);
 	emit_changed();
 }
 
 void GDFastNoise::set_domain_warp_amp(float domainWarpAmp)
 {
+	_domainWarpAmp = domainWarpAmp;
 	noise.SetDomainWarpAmp(domainWarpAmp);
 	emit_changed();
 }

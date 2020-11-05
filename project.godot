@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "ProxyTexture",
 "class": "FastNoiseTexture",
 "language": "GDScript",
-"path": "res://addons/gdfastnoise/FastNoiseTexture.gd"
+"path": "res://addons/gdfastnoise/resources/FastNoiseTexture.gd"
 } ]
 _global_script_class_icons={
 "FastNoiseTexture": "res://addons/gdfastnoise/icons/FastNoiseTexture.svg"
@@ -27,7 +27,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-FNHandler="*res://addons/gdfastnoise/FNHandler.gd"
+FNHandler="*res://addons/gdfastnoise/scripts/FNHandler.gd"
 
 [display]
 

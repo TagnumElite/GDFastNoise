@@ -3,7 +3,7 @@ extends EditorPlugin
 
 const FN := preload("res://addons/gdfastnoise/bin/fastnoise.gdns")
 const FNIcon := preload("res://addons/gdfastnoise/icons/FastNoise.svg")
-const FNHandler := "res://addons/gdfastnoise/FNHandler.gd"
+const FNHandler := "res://addons/gdfastnoise/scripts/FNHandler.gd"
 
 func _enter_tree() -> void:
 	add_autoload_singleton("FNHandler", FNHandler)

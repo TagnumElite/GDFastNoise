@@ -3,7 +3,7 @@ class_name FastNoiseTexture, "res://addons/gdfastnoise/icons/FastNoiseTexture.sv
 extends ProxyTexture
 
 const FN := preload("res://addons/gdfastnoise/bin/fastnoise.gdns")
-const FNHandler := preload("res://addons/gdfastnoise/FNHandler.gd")
+const FNHandler := preload("res://addons/gdfastnoise/scripts/FNHandler.gd")
 
 export(int, 1,2048,1) var width := 256 setget _set_width
 export(int, 1,2048,1) var height := 256 setget _set_height

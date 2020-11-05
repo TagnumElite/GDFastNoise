@@ -78,7 +78,7 @@ else:
 cpp_library += '.' + str(bits)
 
 # make sure our binding library is properly includes
-env.Append(CPPPATH=['.', godot_headers_path, cpp_bindings_path + 'include/', cpp_bindings_path + 'include/core/', cpp_bindings_path + 'include/gen/', 'vendor/FastNoise/Cpp', 'lib/FastNoiseSIMD'])
+env.Append(CPPPATH=['.', godot_headers_path, cpp_bindings_path + 'include/', cpp_bindings_path + 'include/core/', cpp_bindings_path + 'include/gen/', 'vendor/FastNoise/Cpp', 'vendor/FastNoise2/include', 'vendor/FastNoise2/include/FastNoise', 'vendor/FastNoise2/include/FastSIMD'])
 env.Append(LIBPATH=[cpp_bindings_path + 'bin/'])
 env.Append(LIBS=[cpp_library])
 

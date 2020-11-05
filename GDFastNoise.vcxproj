@@ -68,7 +68,7 @@
     <NMakeCleanCommandLine>scons -c</NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>scons -c &amp; scons</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
-    <IncludePath>$(SolutionDir)src;$(SolutionDir);$(SolutionDir)godot-cpp\godot_headers;$(SolutionDir)godot-cpp\include;$(SolutionDir)godot-cpp\include\core;$(SolutionDir)godot-cpp\include\gen;$(SolutionDir)vendor\FastNoise\Cpp;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)src;$(SolutionDir);$(SolutionDir)godot-cpp\godot_headers;$(SolutionDir)godot-cpp\include;$(SolutionDir)godot-cpp\include\core;$(SolutionDir)godot-cpp\include\gen;$(SolutionDir)vendor\FastNoise\Cpp;$(SolutionDir)vendor\FastNoise2\include;$(SolutionDir)vendor\FastNoise2\include\FastNoise;$(SolutionDir)vendor\FastNoise2\include\FastSIMD;$(IncludePath)</IncludePath>
     <ReferencePath>$(SolutionDir)godot-cpp\bin;$(ReferencePath)</ReferencePath>
     <LibraryPath>libgodot-cpp;$(LibraryPath)</LibraryPath>
     <SourcePath>$(SolutionDir)src;$(SourcePath)</SourcePath>
@@ -79,7 +79,7 @@
     <NMakeCleanCommandLine>scons -c</NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>scons -c &amp; scons</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
-    <IncludePath>$(SolutionDir)src;$(SolutionDir);$(SolutionDir)godot-cpp\godot_headers;$(SolutionDir)godot-cpp\include;$(SolutionDir)godot-cpp\include\core;$(SolutionDir)godot-cpp\include\gen;$(SolutionDir)vendor\FastNoise\Cpp;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)src;$(SolutionDir);$(SolutionDir)godot-cpp\godot_headers;$(SolutionDir)godot-cpp\include;$(SolutionDir)godot-cpp\include\core;$(SolutionDir)godot-cpp\include\gen;$(SolutionDir)vendor\FastNoise\Cpp;$(SolutionDir)vendor\FastNoise2\include;$(SolutionDir)vendor\FastNoise2\include\FastNoise;$(SolutionDir)vendor\FastNoise2\include\FastSIMD;$(IncludePath)</IncludePath>
     <ReferencePath>$(SolutionDir)godot-cpp\bin;$(ReferencePath)</ReferencePath>
     <LibraryPath>libgodot-cpp;$(LibraryPath)</LibraryPath>
     <SourcePath>$(SolutionDir)src;$(SourcePath)</SourcePath>
@@ -116,7 +116,6 @@
     <ClInclude Include="src\GDFastNoise.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="addons\gdfastnoise\bin\fastnoisetexture.gdns" />
     <None Include="addons\gdfastnoise\icons\FastNoise.svg" />
     <None Include="addons\gdfastnoise\icons\FastNoiseTexture.svg" />
     <None Include="bin\fastnoise.gdnlib" />
